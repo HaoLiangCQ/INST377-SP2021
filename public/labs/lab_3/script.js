@@ -1,19 +1,4 @@
 /* Put your javascript in here */
-
-
-/* var sliderWidth = 300;
-var slider = $('#slider');
-var sliderCount = $('div', slider).length;
-slider.width(sliderCount * sliderWidth);
-
-$('.date-nav-prev').click(function () { 
-    $('#slider').animate({left: '+='+sliderWidth}, 500);
-});
-
-$('.date-nav-next').click(function () {
-    $('#slider').animate({left: '-='+sliderWidth}, 500);
-}); */
-
 function carouselChange() {
     const pictureNames =["onigiri_1.png","onigiri_2.png","onigiri_3.png","onigiri_4.png","roll_1.png","roll_2.png","roll_3.png"];
 
