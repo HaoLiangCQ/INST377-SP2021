@@ -1,7 +1,7 @@
 /* Put your javascript in here */
 /* Hao Liang*/
 function carouselChange() {
-    const pictureNames =["onigiri_1.png","onigiri_2.png","onigiri_3.png","onigiri_4.png","roll_1.png","roll_2.png","roll_3.png"];
+    const pictureNames =["images/onigiri_1.png","images/onigiri_2.png","images/onigiri_3.png","images/onigiri_4.png","images/roll_1.png","images/roll_2.png","images/roll_3.png"];
 
     const box = document.querySelector('#box1');
 
