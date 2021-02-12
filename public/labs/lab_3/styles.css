@@ -2,10 +2,8 @@
  https://javascript.info/introduction-browser-events */
  
 .main{
-    width:99px;
-    height:99px;
     position: absolute;
+    left: 50%;
     top: 50%;
-    left:50%;
 }
 body {background-color: grey;}
