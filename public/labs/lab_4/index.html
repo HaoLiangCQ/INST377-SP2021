@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>hao liang lab 4</title>
+    </head>
+    <link href="styles.css" rel="stylesheet"> 
+    <body>
+        <div class="container">
+          <h1>hao liang lab 4</h1>
+            <form action="/api" method="post">
+              <ul class="flex-outer">
+                <li>
+                  <label for="fname">First Name</label>
+                  <input name ="fname" type="text" id="fname" placeholder="Enter your first name here">
+                </li>
+                <li>
+                  <label for="lname">Last Name</label>
+                  <input name="lname" type="text" id="lname" placeholder="Enter your last name here">
+                </li>
+                <li>
+                  <label for="email">Email</label>
+                  <input name="email" type="email" id="email" placeholder="Enter your email here">
+                </li>
+                <li>
+                  <label for="phone">Phone</label>
+                  <input name="phone" type="tel" id="phone" placeholder="Enter your phone here">
+                </li>
+                <li>
+                  <label for="message">Message</label>
+                  <textarea name="message" rows="5" cols="33" id="message" placeholder="Enter your message here"></textarea>
+                </li>
+                <li>
+                  <p>Age</p>
+                  <ul name="age" class="flex-inner">
+                    <li>
+                        <input name="eighteen-to-thirtyfive" type="checkbox" id="eighteen-to-thirtyfive">
+                        <label name="18-35" for="eighteen-to-thirtyfive">18-35</label>
+                      </li>
+                      <li>
+                        <input name="thirtyfive-to-thirtynine" type="checkbox" id="thirtyfive-to-thirtynine">
+                        <label name="35-50" for="thirtyfive-to-thirtynine">35-50</label>
+                      </li>
+                      <li>
+                        <input name="fifty-to-sixtyfive" type="checkbox" id="fifty-to-sixtyfive">
+                        <label name="50-65" for="fifty-to-sixtyfive">50-65</label>
+                      </li>
+                  </ul>
+                </li>
+                <li>
+                  <button name="submit" id="form-button" type="submit">Submit</button>
+                </li>
+              </ul>
+            </form>
+          </div>
+</body>
+  </html>
