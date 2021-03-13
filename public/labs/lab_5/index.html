@@ -21,20 +21,28 @@
    <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-    <div class="columns">
-        <div class="column">
-            <h1 class="title is 3">Hao Liang Lab 5</h1>
-            <h2 class="subtitle is 5">Zip Code Food Search</h2>
-            <div class="container">
+    <div class="columns m-2">
+        <div class="column is-half">
+            <h1 class="title is-3">Hao Liang Lab 5</h1>
+            <h2 class="subtitle is-6">Zip Code Food Search</h2>
+            
             <form id="search-form" action="/api" method="get">
-                <div class="title is 6"><label>Search</label></div>
-                <label for="search"></label>
-                <input type="text" id="search" name="search">
+                <div class="subtitle is 6"><label>Search</label></div>
+                <label for="search-input"></label>
+                <input type="text" id="search" name="search" placeholder="Type Zip Code Here">
+                <button type="submit">Submit</button>
             </form>
+            
             <ul class="target-list">
             </ul>
         </div>
-        <div class="column"><div id="mapid"></div></div>
+
+        <div class="column is-half">
+            <div id="mapid" style="height:500px;">
+            </div>
+        </div>
+        
+        
     </div>
     <script src='script.js'></script>
 </body>

@@ -25,10 +25,10 @@ async function dataHandler(mapFromLeafLet) {
   const request = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json');
   const data=await request.json();
 
-  form.addEventListener('submit',async(event)=>{
+  form.addEventListener('submit', async(event) => {
     event.preventDefault();
-    console.log('form submitted');
-    const filtered=data.filter((record)=>record.zip.includes(search.value) && record.geocoded_column_1);
+    console.log('submit form', search.value);
+    const filtered = data.filter((record) => record.zip.includes(search.value) && record.geocoded_column_1);
     console.table(filtered);
     
     filtered.forEach((item) =>{
