@@ -14,6 +14,7 @@ console.log('mymap',mymap);
 return mymap;
 }
 
+const marker_list=[];
 async function dataHandler(mapFromLeafLet) {
   // use your assignment 1 data handling code here
   // and target mapObjectFromFunction to attach markers
@@ -26,23 +27,36 @@ async function dataHandler(mapFromLeafLet) {
   const data=await request.json();
 
   form.addEventListener('submit', async(event) => {
+    
     event.preventDefault();
     console.log('submit form', search.value);
-    const filtered = data.filter((record) => record.zip.includes(search.value) && record.geocoded_column_1);
+    const result = data.filter((record) => record.zip.includes(search.value) && record.geocoded_column_1);
+    
+    const filtered = result.slice(0, 5);
+    const firstCoor = filtered[0].geocoded_column_1.coordinates;
+    mapFromLeafLet.setView(new L.LatLng(firstCoor[1],firstCoor[0]),13);
     console.table(filtered);
     
+    document.querySelector('.target-list').innerHTML='';
+    marker_list.forEach((savedMarker) =>{mapFromLeafLet.removeLayer(savedMarker); marker_list.pop();});
+
+
+
     filtered.forEach((item) =>{
       const longLat=item.geocoded_column_1.coordinates;
       console.log('markerLongLat',longLat[0],longLat[1]);
+
       const marker = L.marker([longLat[1],longLat[0]]).addTo(mapFromLeafLet);
-      
+      marker_list.push(marker);
       const appendItem=document.createElement('li');
       appendItem.classList.add('block');
       appendItem.classList.add('list-item');
+      appendItem.classList.add('has-background-warning');
       appendItem.innerHTML = `<div class="list-header is-size-5">${item.name}</div> 
       		<address class="is-size-6"> ${item.address_line_1} </address>`;
       targetList.append(appendItem);
     });
+    
   });
 }
 
